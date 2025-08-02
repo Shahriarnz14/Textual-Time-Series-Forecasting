@@ -10,11 +10,11 @@
 
 </div>
 
-## 🧠 Overview
+## Overview
 
 This module implements encoder-based approaches for textual time series forecasting using pre-trained encoder-only transformer models. Our framework transforms irregular clinical event sequences into structured prediction tasks, enabling accurate temporal forecasting with encoder-only architectures.
 
-### 🎯 Key Features
+### Key Features
 
 - **Fine-tuned Classification**: Task-specific heads on pre-trained encoders
 - **Zero-Shot Masking**: Masked language modeling for temporal reasoning
@@ -22,7 +22,7 @@ This module implements encoder-based approaches for textual time series forecast
 - **Clinical Applications**: Designed for irregular medical event sequences
 - **Robust Evaluation**: Comprehensive metrics including C-Index and F1-Score
 
-## 📦 Data Format
+## Data Format
 
 Our framework expects clinical time series data where each case report contains a sequence of timestamped events:
 
@@ -41,7 +41,7 @@ event,timestamp
 - **Format**: CSV files with consistent column naming
 - **Structure**: One file per case report/patient encounter
 
-## 🛠 Input Representation
+## Input Representation
 
 Clinical events are serialized into transformer-compatible sequences:
 
@@ -56,11 +56,11 @@ Clinical events are serialized into transformer-compatible sequences:
 4. **Text Serialization**: Format as transformer input with special tokens
 5. **Truncation Strategy**: Left-truncation to fit within model context limits
 
-## 🧪 Prediction Tasks
+## Prediction Tasks
 
 We implement two complementary binary classification tasks:
 
-### 1. Event Ordering (Concordance) 🔄
+### 1. Event Ordering (Concordance) 
 **Objective**: Given pairs of future events, predict their temporal ordering
 
 **Input Format**:
@@ -77,7 +77,7 @@ We implement two complementary binary classification tasks:
 - Clinical pathway optimization
 - Risk progression modeling
 
-### 2. Time-Window Classification ⏰
+### 2. Time-Window Classification 
 **Objective**: Predict whether events occur within specified time horizons
 
 **Input Format**:
@@ -142,7 +142,7 @@ We implement two complementary binary classification tasks:
 - **Target**: Predict "before"/"after" tokens for relative timing
 - **Advantage**: Natural language reasoning for temporal ordering
 
-## 🚀 Training & Evaluation
+## Training & Evaluation
 
 ### Training Procedure
 1. **Data Preparation**: Generate sliding window examples from time series
@@ -168,7 +168,7 @@ H = 24  # Time window in hours
 - **Cross-Validation**: Temporal split to avoid data leakage
 - **Threshold Selection**: Optimal F1 threshold on validation set
 
-## 📁 File Structure
+## File Structure
 
 ```
 encoder_llm/
@@ -185,7 +185,7 @@ encoder_llm/
     └── 📂 preprocessing/              # Data preprocessing tools
 ```
 
-## 🛠 Usage
+## Usage
 
 ### Quick Start
 ```bash
@@ -259,7 +259,7 @@ python encoder_mask_time_window.py \
   --lr 1e-5
 ```
 
-## 📚 Dependencies
+## Dependencies
 
 ### Core Requirements
 - `torch >= 2.6.0`
