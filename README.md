@@ -1,4 +1,4 @@
-# Textual Time Series Forecasting: Structuring Narratives for Temporal AI in Healthcare
+# Forecasting Clinical Risk from Textual Time Series: Structuring Narratives for Temporal AI in Healthcare
 
 <div align="center">
 
