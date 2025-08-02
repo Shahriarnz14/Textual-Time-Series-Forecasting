@@ -6,7 +6,7 @@
 [![Transformers](https://img.shields.io/badge/🤗%20Transformers-4.50-yellow.svg)](https://huggingface.co/transformers)
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://python.org)
 
-*Encoder-only transformer models for clinical time series forecasting*
+*Encoder-only transformer models for clinical textual time series forecasting*
 
 </div>
 
