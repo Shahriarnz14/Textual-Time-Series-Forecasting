@@ -1,0 +1,33 @@
+{
+  "//": "Prompt-Based Decoder Configuration",
+  "//": "Configuration for prompt-based inference experiments",
+  
+  "// Approach Configuration": "",
+  "approach": "PROMPT:window",
+  "model": "llama-3.3-70b",
+  
+  "// Data Paths": "",
+  "test_dir": "data/test",
+  "run_dir": "experiments/decoder/prompt_runs",
+  
+  "// Prompt Configuration": "",
+  "prompt_template": "window_system_fewshot.txt",
+  "systext_file": null,
+  
+  "// Model Parameters": "",
+  "forecast_window": 24,
+  "num_labels": 8,
+  "max_len": 4096,
+  "batch_size": 2,
+  
+  "// Inference Parameters": "",
+  "sof": 99999,
+  "cache_dir": "/path/to/huggingface/cache",
+  
+  "// Execution Options": "",
+  "eval_mode": true,
+  "verbose": true,
+  
+  "// Additional Configurations": "",
+  "experiment_name": "llama_70b_fewshot_prompt"
+}

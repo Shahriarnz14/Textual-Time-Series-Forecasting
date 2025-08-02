@@ -1,0 +1,32 @@
+{
+  "//": "Encoder Experiment Configuration",
+  "//": "This configuration file defines parameters for encoder-based experiments",
+  
+  "// Task Configuration": "",
+  "task": "time_window",
+  "model": "deberta",
+  
+  "// Data Paths": "",
+  "data_dir": "data/train",
+  "test_dir": "data/test",
+  "output_dir": "experiments/encoder",
+  
+  "// Model Parameters": "", 
+  "K": 8,
+  "H": 24,
+  "max_length": 512,
+  "batch_size": 12,
+  
+  "// Training Parameters": "",
+  "lr": 1e-5,
+  "epochs": 15,
+  "patience": 5,
+  "timestep_drop_rate": 0.1,
+  
+  "// Execution Options": "",
+  "eval_only": false,
+  "verbose": true,
+  
+  "// Additional Configurations": "",
+  "experiment_name": "deberta_time_window_baseline"
+}

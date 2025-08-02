@@ -1,0 +1,38 @@
+{
+  "//": "Decoder Experiment Configuration",
+  "//": "This configuration file defines parameters for decoder-based experiments",
+  
+  "// Approach Configuration": "",
+  "approach": "MLP",
+  "model": "llama-3.1-8b",
+  
+  "// Data Paths": "",
+  "data_dir": "data/train",
+  "test_dir": "data/test",
+  "run_dir": "experiments/decoder/runs",
+  
+  "// Model Parameters": "",
+  "forecast_window": 24,
+  "num_labels": 8,
+  "max_len": 2048,
+  "batch_size": 8,
+  
+  "// Training Parameters": "",
+  "lr": 1e-3,
+  "epochs": 500,
+  "train_epochs_per_eval": 10,
+  "accumulation_steps": 4,
+  "checkpoint_interval": 20,
+  "sof": 20,
+  
+  "// Decoder-Specific Options": "",
+  "separate_labels": false,
+  "cache_dir": null,
+  
+  "// Execution Options": "",
+  "eval_mode": false,
+  "verbose": true,
+  
+  "// Additional Configurations": "",
+  "experiment_name": "llama_8b_mlp_baseline"
+}
