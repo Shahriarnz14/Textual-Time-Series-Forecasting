@@ -94,7 +94,7 @@ We implement two complementary binary classification tasks:
 - Resource allocation planning
 - Intervention timing
 
-## 🤖 Model Architectures
+## Model Architectures
 
 ### Standard Classification Models
 
