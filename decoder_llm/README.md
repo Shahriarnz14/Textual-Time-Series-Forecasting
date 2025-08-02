@@ -10,11 +10,11 @@
 
 </div>
 
-## 🧠 Overview
+## Overview
 
 This module implements decoder-based approaches for textual time series forecasting using large language models (LLMs). Our framework leverages the generative capabilities of decoder-only architectures to perform structured prediction over clinical event sequences through both fine-tuning and prompt-based approaches.
 
-### 🎯 Key Features
+### Key Features
 
 - **Dual Approach Framework**: MLP head fine-tuning and prompt-based inference
 - **Large Language Model Support**: Llama, DeepSeek, and other state-of-the-art models
@@ -22,7 +22,7 @@ This module implements decoder-based approaches for textual time series forecast
 - **Flexible Forecasting**: Variable time windows and event counts
 - **Zero/Few-Shot Capabilities**: Prompt-based inference without parameter updates
 
-## 📦 Data Format
+## Data Format
 
 Our framework processes clinical time series data with timestamped events and generates structured forecasts:
 
@@ -50,9 +50,9 @@ Structured text response for time window prediction:
 0.8 | 0.3 | 0.1 | 0.9 | 0.2 | 0.6 | 0.4 | 0.7
 ```
 
-## 🏗️ Architecture Approaches
+## Architecture Approaches
 
-### 1. MLP Head Fine-Tuning 🎯
+### 1. MLP Head Fine-Tuning
 
 **Concept**: Freeze pre-trained LLM and train lightweight classification head
 
@@ -92,7 +92,7 @@ Predict: Which events occur in the next 24 hours?
 - Leverages model's reasoning capabilities
 - Interpretable prediction process
 
-## 🤖 Supported Models
+## Supported Models
 
 ### Llama Family
 
@@ -135,7 +135,7 @@ Predict: Which events occur in the next 24 hours?
 #### MediPhi-PubMed (`microsoft/MediPhi-PubMed`)
 #### RedPajama-INCITE 7B Instruct (`togethercomputer/RedPajama-INCITE-7B-Instruct`)
 
-## 🎯 Prediction Tasks
+## Prediction Tasks
 
 ### Time Window Forecasting 📅
 
@@ -154,7 +154,7 @@ Predict events in next 24h: [cardiac_cath, icu_transfer, surgery, discharge]
 - AUROC per event
 - Concordance with clinical timelines
 
-### Event Ordering Prediction 🔄
+### Event Ordering Prediction
 
 **Objective**: Predict temporal ordering of future clinical events
 
@@ -170,7 +170,7 @@ Order these future events: [treatment_A, treatment_B, outcome_C]
 - Concordance Index (C-Index)
 - Ranking accuracy
 
-## 🚀 Training & Evaluation
+## Training & Evaluation
 
 ### MLP Head Training Pipeline
 
@@ -226,7 +226,7 @@ Given: [Patient history]
 Predict: [Event list]
 ```
 
-## 📁 File Structure
+## File Structure
 
 ```
 decoder_llm/
@@ -242,7 +242,7 @@ decoder_llm/
 └── 📄 README.md                       # This file
 ```
 
-## 🛠 Usage
+## Usage
 
 ### Quick Start
 
