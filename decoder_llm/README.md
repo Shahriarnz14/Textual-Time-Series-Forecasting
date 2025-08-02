@@ -6,7 +6,7 @@
 [![Transformers](https://img.shields.io/badge/🤗%20Transformers-4.50-yellow.svg)](https://huggingface.co/transformers)
 [![Python](https://img.shields.io/badge/Python-3.10-blue.svg)](https://python.org)
 
-*Decoder-only transformer models for clinical time series forecasting*
+*Decoder-only transformer models for clinical textual time series forecasting*
 
 </div>
 
@@ -71,7 +71,7 @@ Structured text response for time window prediction:
 - Preserves pre-trained knowledge
 - Scalable to very large models
 
-### 2. Prompt-Based Inference 💭
+### 2. Prompt-Based Inference
 
 **Concept**: Use natural language prompts to elicit structured predictions
 
@@ -137,7 +137,7 @@ Predict: Which events occur in the next 24 hours?
 
 ## Prediction Tasks
 
-### Time Window Forecasting 📅
+### Time Window Forecasting
 
 **Objective**: Predict which events occur within specified time horizons
 
