@@ -9,32 +9,32 @@
 
 </div>
 
-## 🌟 Overview
+## Overview
 
 This repository presents a novel framework for forecasting clinical risk from textual time series using both **encoder-based** and **decoder-based** transformer models. Our approach transforms irregular, event-based clinical narratives into structured temporal predictions, enabling automated clinical decision support and early risk detection.
 
-### 🎯 Key Contributions
+### Key Contributions
 
 - **Unified Framework**: A comprehensive approach handling both encoder-only (BERT, RoBERTa, DeBERTa-v3, ModernBERT, Bioclinical ModernBERT) and decoder-only (Llama, DeepSeek, OLMO, RedPajama-INCITE, MediPhi-PubMed) architectures
 - **Dual Task Learning**: Event ordering prediction (concordance) and time-window classification for robust temporal understanding
 - **Clinical Applications**: Real-world evaluation on clinical case reports with irregular time series data
 - **Novel Representations**: Innovative text serialization strategies for temporal clinical data
 
-## 🏗️ Architecture
+## Architecture
 
 Our framework supports two complementary approaches:
 
-### 📥 Encoder Models (`encoder_llm/`)
+### Encoder Models (`encoder_llm/`)
 - **Fine-tuned Classification**: Task-specific heads on pre-trained encoders
 - **Zero-Shot Masking**: Masked language modeling for temporal reasoning
 - **Tasks**: Binary classification for event ordering and time-window prediction
 
-### 📤 Decoder Models (`decoder_llm/`)
+### Decoder Models (`decoder_llm/`)
 - **MLP Head Adaptation**: Lightweight heads on frozen language models  
 - **Prompt-Based Inference**: Zero-shot and few-shot structured prediction
 - **Flexible Output**: Multi-label probability distributions for forecast windows
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 ```bash
@@ -47,7 +47,7 @@ conda env create -f environment_tts_forecasting.yml
 conda activate tts_forecasting
 ```
 
-### 🏃‍♂️ Running Experiments
+### Running Experiments
 
 #### Encoder Models
 ```bash
@@ -69,7 +69,7 @@ python run_decoder_experiments.py --approach MLP --model llama-3.3-70b --forecas
 python run_decoder_experiments.py --approach PROMPT:window --model llama-3.3-70b --eval_mode
 ```
 
-## 📊 Data Format
+## Data Format
 
 Our framework expects clinical time series data in CSV format:
 
@@ -85,7 +85,7 @@ Each case report contains:
 - **Event**: Free-text clinical observation
 - **Timestamp**: Hours relative to admission
 
-## 🔬 Experimental Setup
+## Experimental Setup
 
 ### Evaluation Tasks
 
@@ -115,7 +115,7 @@ Each case report contains:
 - **F1-Score**: For time window classification  
 - **AUROC**: For binary prediction performance
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 Textual-Time-Series-Forecasting/
@@ -134,15 +134,7 @@ Textual-Time-Series-Forecasting/
 └── 📄 README.md
 ```
 
-## 🔬 Results Summary
-
-Our approach demonstrates strong performance across clinical forecasting tasks:
-
-- **Encoder Models**: Achieve 0.72-0.78 C-Index for temporal ordering
-- **Decoder Models**: 0.65-0.82 F1-Score for time window prediction  
-- **Prompt-Based**: Competitive zero-shot performance with minimal examples
-
-## 📖 Citation
+## Citation
 
 If you use this work in your research, please cite:
 
